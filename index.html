@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon AWS</title>
+</head>
+<body>
+ <table>
+	<h2>Operations to be performed on S3</h2>
+        <tr>
+          <form action="/upload" method=post enctype=multipart/form-data>
+        <div class="left">
+		Select the file which you want to upload:
+		<input type="file" name="upload_file">
+        <input type=submit name="upload" value=Upload>
+    </div>
+	</form>
+
+        </tr>
+
+	<tr><form action="/download" method=post enctype=multipart/form-data>
+        <div class="left">
+        Select the file which you want to download: <input type="text" name="download_file">
+            <input type="text" name="download_version">
+		<input type=submit name="download" value=Download>
+    </div>
+	</form></tr>
+
+	   <tr><form action="/delete" method=post enctype=multipart/form-data>
+        Select the file which you want to delete: <input type="text" name="delete_file">
+           <input type="text" name="delete_version">
+        <input type=submit name="delete" value=Delete>
+    </form></tr>
+
+
+     <tr><form action="/listfiles" method=post enctype=multipart/form-data>
+    <div class="left">
+        Lists the files in Storage:
+        <input type=submit name="list" value="listfiles">
+        </div>
+    </form></tr>
+
+     tr><form action="/exit" method=post enctype=multipart/form-data>
+    <div class="left">
+        <input type=submit name="exit" value="exit">
+        </div>
+    </form></tr>
+    </table>
+
+</body>
+</html>
